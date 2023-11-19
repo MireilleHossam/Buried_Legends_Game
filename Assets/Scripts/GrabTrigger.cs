@@ -24,7 +24,8 @@ public class GrabTrigger : MonoBehaviour
         if (isHeld)
         {
             // ADD a delay of 20 seconds
-            // AMIRAS Code
+            Invoke("function of amii", 20);
+            // AMIRAS Code calling
         }
     }
 
