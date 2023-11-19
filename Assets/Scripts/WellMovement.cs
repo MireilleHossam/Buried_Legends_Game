@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class WellMovement : MonoBehaviour
 {
     public float moveSpeed = 0.3f; // Speed at which the well walls move
@@ -11,125 +9,127 @@ public class WellMovement : MonoBehaviour
     public float maxHeight = -2.94f; // Maximum height
     public float midHeight = -1.5f; // Height for the second floor
 
-    private int currentLevel = 0;
+    private bool moveFirst = false;
+    private bool moveSecond = false;
+    private bool moveThird = false;
 
     void Update()
     {
-        MoveWell();
+        if (moveFirst)
+        {
+            MoveOne();
+        }
+
+        if (moveSecond)
+        {
+            MoveTwo();
+        }
+
+        if (moveThird)
+        {
+            MoveThree();
+        }
     }
 
-    private void MoveWell()
+    public void MoveFirstFloor()
     {
-        float targetHeight = currentLevel * midHeight;
+        moveFirst = true;
+        moveSecond = false;
+        moveThird = false;
+    }
 
-        if (transform.position.y > targetHeight)
+    public void MoveSecondFloor()
+    {
+        moveFirst = false;
+        moveSecond = true;
+        moveThird = false;
+    }
+
+    public void MoveThirdFloor()
+    {
+        moveFirst = false;
+        moveSecond = false;
+        moveThird = true;
+    }
+
+    private void MoveOne()
+    {
+        // Move the well walls downward
+        transform.Translate(Vector3.down * moveSpeed * Time.deltaTime, Space.World);
+
+        // Stop the movement when a specific height is reached
+        if (transform.position.y < minHeight)
         {
-            // Move the well walls upward in the world space
-            transform.Translate(Vector3.down * moveSpeed * Time.deltaTime, Space.World);
-        }
-        else
-        {
-            // Stop the movement when the specific height is reached
+            moveFirst = false;
             moveSpeed = 0f;
         }
     }
 
-    public void MoveToNextFloor()
+    private void MoveTwo()
     {
-        currentLevel++;
+        transform.Translate(Vector3.down * moveSpeed * Time.deltaTime, Space.World);
 
-        // Reset the level when it reaches the maximum number of levels
-        if (currentLevel >= 3)
+        if (transform.position.y < midHeight)
         {
-            currentLevel = 0;
+            moveSecond = false;
+            moveSpeed = 0f;
         }
+    }
 
-        // Reset moveSpeed to allow movement on the next button click
-        moveSpeed = 0.3f;
+    private void MoveThree()
+    {
+        transform.Translate(Vector3.down * moveSpeed * Time.deltaTime, Space.World);
+
+        if (transform.position.y < maxHeight)
+        {
+            moveThird = false;
+            moveSpeed = 0f;
+        }
     }
 }
-// public class WellMovement : MonoBehaviour
+
+//Move to next levels, alternative code:
+//public class WellMovement : MonoBehaviour
 // {
 //     public float moveSpeed = 0.3f; // Speed at which the well walls move
 //     public float minHeight = 1.5f; // Minimum height the well walls can move
 //     public float maxHeight = -2.94f; // Maximum height
 //     public float midHeight = -1.5f; // Height for the second floor
 
-//     private bool moveFirst = false;
-//     private bool moveSecond = false;
-//     private bool moveThird = false;
+//     private int currentLevel = 0;
 
 //     void Update()
 //     {
-//         if (moveFirst)
+//         MoveWell();
+//     }
+
+//     private void MoveWell()
+//     {
+//         float targetHeight = currentLevel * midHeight;
+
+//         if (transform.position.y > targetHeight)
 //         {
-//             MoveOne();
+//             // Move the well walls upward in the world space
+//             transform.Translate(Vector3.down * moveSpeed * Time.deltaTime, Space.World);
 //         }
-
-//         if (moveSecond)
+//         else
 //         {
-//             MoveTwo();
-//         }
-
-//         if (moveThird)
-//         {
-//             MoveThree();
-//         }
-//     }
-
-//     public void MoveFirstFloor()
-//     {
-//         moveFirst = true;
-//         moveSecond = false;
-//         moveThird = false;
-//     }
-
-//     public void MoveSecondFloor()
-//     {
-//         moveFirst = false;
-//         moveSecond = true;
-//         moveThird = false;
-//     }
-
-//     public void MoveThirdFloor()
-//     {
-//         moveFirst = false;
-//         moveSecond = false;
-//         moveThird = true;
-//     }
-
-//     private void MoveOne()
-//     {
-//         // Move the well walls downward
-//         transform.Translate(Vector3.down * moveSpeed * Time.deltaTime, Space.World);
-
-//         // Stop the movement when a specific height is reached
-//         if (transform.position.y < minHeight)
-//         {
-//             moveFirst = false;
+//             // Stop the movement when the specific height is reached
 //             moveSpeed = 0f;
 //         }
 //     }
 
-//     private void MoveTwo()
+//     public void MoveToNextFloor()
 //     {
-//         transform.Translate(Vector3.down * moveSpeed * Time.deltaTime, Space.World);
+//         currentLevel++;
 
-//         if (transform.position.y < midHeight)
+//         // Reset the level when it reaches the maximum number of levels
+//         if (currentLevel >= 3)
 //         {
-//             moveSecond = false;
-//             moveSpeed = 0f;
+//             currentLevel = 0;
 //         }
-//     }
 
-//     private void MoveThree()
-//     {
-//         transform.Translate(Vector3.down * moveSpeed * Time.deltaTime, Space.World);
-
-//         if (transform.position.y < maxHeight)
-//         {
-//             moveThird = false;
-//             moveSpeed = 0f;
-//         }
+//         // Reset moveSpeed to allow movement on the next button click
+//         moveSpeed = 0.3f;
 //     }
-// }
+//}

@@ -19,11 +19,11 @@ public class TestMovementScript : MonoBehaviour
         
     }
 
-    // void onEnable()
+    void onEnable()
     {
-        // wellMovement.MoveFirstFloor();
-        // wellMovement.MoveSecondFloor();
-        // wellMovement.MoveThirdFloor();
+        wellMovement.MoveFirstFloor();
+        wellMovement.MoveSecondFloor();
+        wellMovement.MoveThirdFloor();
     }
     
 }
