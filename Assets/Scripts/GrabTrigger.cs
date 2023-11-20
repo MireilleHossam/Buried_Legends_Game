@@ -8,7 +8,7 @@ public class GrabTrigger : MonoBehaviour
     public XRGrabInteractable heldObject; // Reference to the object that can be held  Mariams Objects
     public Transform wellMove; // the well moves
 
-    private bool isHeld = false; // make the well stationary
+    public float movementDelay= 20;
    
     void Start()
     {
@@ -20,18 +20,11 @@ public class GrabTrigger : MonoBehaviour
     void Update()
     {
 
-        
-        if (isHeld)
-        {
-            // ADD a delay of 20 seconds
-            Invoke("function of amii", 20);
-            // AMIRAS Code calling
-        }
     }
 
     void OnObjectGrab(XRBaseInteractor interactor)
     {
-        isHeld = true;
+        Invoke("function of amii", movementDelay);
     }
 
    
