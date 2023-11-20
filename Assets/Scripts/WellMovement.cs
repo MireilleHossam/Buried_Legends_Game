@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WellMovement : MonoBehaviour
 {
-    public float moveSpeed = 0.3f; // Speed at which the well walls move
+    public float defaultMoveSpeed = 0.3f; // Speed at which the well walls move
     public float minHeight = 1.5f; // Minimum height the well walls can move
     public float maxHeight = -2.94f; // Maximum height
     public float midHeight = -1.5f; // Height for the second floor
@@ -34,26 +34,21 @@ public class WellMovement : MonoBehaviour
     public void MoveFirstFloor()
     {
         moveFirst = true;
-        moveSecond = false;
-        moveThird = false;
     }
 
     public void MoveSecondFloor()
     {
-        moveFirst = false;
         moveSecond = true;
-        moveThird = false;
     }
 
     public void MoveThirdFloor()
     {
-        moveFirst = false;
-        moveSecond = false;
         moveThird = true;
     }
 
     private void MoveOne()
     {
+        moveSpeed = defaultMoveSpeed;
         // Move the well walls downward
         transform.Translate(Vector3.down * moveSpeed * Time.deltaTime, Space.World);
 
@@ -67,6 +62,7 @@ public class WellMovement : MonoBehaviour
 
     private void MoveTwo()
     {
+        moveSpeed = defaultMoveSpeed;
         transform.Translate(Vector3.down * moveSpeed * Time.deltaTime, Space.World);
 
         if (transform.position.y < midHeight)
@@ -78,6 +74,7 @@ public class WellMovement : MonoBehaviour
 
     private void MoveThree()
     {
+        moveSpeed = defaultMoveSpeed;
         transform.Translate(Vector3.down * moveSpeed * Time.deltaTime, Space.World);
 
         if (transform.position.y < maxHeight)
