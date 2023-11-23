@@ -7,7 +7,8 @@ public class WellMovement : MonoBehaviour
     public float defaultMoveSpeed = 0.3f; // Speed at which the well walls move
     public float minHeight = 1.5f; // Minimum height the well walls can move
     public float maxHeight = -2.94f; // Maximum height
-    public float midHeight = -1.5f; // Height for the second floor
+    public float midHeight = -1.5f;
+    private float moveSpeed;// Height for the second floor
 
     private bool moveFirst = false;
     private bool moveSecond = false;
@@ -33,6 +34,7 @@ public class WellMovement : MonoBehaviour
 
     public void MoveFirstFloor()
     {
+        Debug.Log("moving First");
         moveFirst = true;
     }
 
