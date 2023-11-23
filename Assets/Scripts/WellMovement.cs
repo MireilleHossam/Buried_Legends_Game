@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WellMovement : MonoBehaviour
 {
+    //public float intialMoveSpeed = 0f;
     public float defaultMoveSpeed = 0.3f; // Speed at which the well walls move
     public float minHeight = 1.5f; // Minimum height the well walls can move
     public float maxHeight = -2.94f; // Maximum height
@@ -13,7 +15,10 @@ public class WellMovement : MonoBehaviour
     private bool moveFirst = false;
     private bool moveSecond = false;
     private bool moveThird = false;
-
+    private void Start()
+    {
+        //intialMoveSpeed = 0f;
+    }
     void Update()
     {
         if (moveFirst)
@@ -85,6 +90,8 @@ public class WellMovement : MonoBehaviour
             moveSpeed = 0f;
         }
     }
+
+
 }
 
 //Move to next levels, alternative code:

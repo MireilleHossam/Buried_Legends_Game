@@ -171,15 +171,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 3.65
       objectReference: {fileID: 0}
+    - target: {fileID: 4459245365802613015, guid: 5b056cc4bd037594b99de85b40caf762,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4460647962975532254, guid: 5b056cc4bd037594b99de85b40caf762,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4460647962975532254, guid: 5b056cc4bd037594b99de85b40caf762,
         type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4460647962975532254, guid: 5b056cc4bd037594b99de85b40caf762,
         type: 3}
@@ -379,14 +384,14 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.5275379
   m_Height: 9.536415
   m_Direction: 1
-  m_Center: {x: 0, y: 6.9935513, z: -0.00000047312807}
+  m_Center: {x: 0.029811323, y: 2.1400003, z: -0.0000004566063}
 --- !u!1 &8539228 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9196616672483925840, guid: 5b056cc4bd037594b99de85b40caf762,
@@ -437,7 +442,25 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 424282626}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 424282628}
         m_TargetAssemblyTypeName: WellMovement, Assembly-CSharp
         m_MethodName: MoveFirstFloor
@@ -450,12 +473,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_LastSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -583,7 +600,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!1 &36508948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2555,6 +2572,7 @@ GameObject:
   m_Component:
   - component: {fileID: 424282627}
   - component: {fileID: 424282628}
+  - component: {fileID: 424282629}
   m_Layer: 0
   m_Name: Well
   m_TagString: Untagged
@@ -2592,10 +2610,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f737a2389dedb40f4b839a3aa5cb2931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 0.3
-  minHeight: -1.5
+  defaultMoveSpeed: 0.4
+  minHeight: -1.75
   maxHeight: -2.94
   midHeight: -1.5
+--- !u!136 &424282629
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424282626}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5.6826954
+  m_Height: 22.750448
+  m_Direction: 1
+  m_Center: {x: -0.33, y: 13.79, z: -0.24}
 --- !u!1001 &620306392
 PrefabInstance:
   m_ObjectHideFlags: 0
