@@ -176,10 +176,15 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4459245365802613015, guid: 5b056cc4bd037594b99de85b40caf762,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4460647962975532254, guid: 5b056cc4bd037594b99de85b40caf762,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4460647962975532254, guid: 5b056cc4bd037594b99de85b40caf762,
         type: 3}
@@ -215,7 +220,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 424282628}
+      objectReference: {fileID: 0}
     - target: {fileID: 4460647962975532254, guid: 5b056cc4bd037594b99de85b40caf762,
         type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -384,7 +389,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -449,18 +454,6 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 424282626}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 424282628}
         m_TargetAssemblyTypeName: WellMovement, Assembly-CSharp
         m_MethodName: MoveFirstFloor
@@ -596,7 +589,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -933,7 +926,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 424282628}
+      objectReference: {fileID: 0}
     - target: {fileID: 4460647962975532254, guid: 5b056cc4bd037594b99de85b40caf762,
         type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -953,7 +946,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 424282628}
+      objectReference: {fileID: 0}
     - target: {fileID: 4460647962975532254, guid: 5b056cc4bd037594b99de85b40caf762,
         type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -1163,7 +1156,7 @@ MonoBehaviour:
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 424282628}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: WellMovement, Assembly-CSharp
         m_MethodName: MoveSecondFloor
         m_Mode: 1
@@ -1663,6 +1656,94 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 269218726}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &278954802
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 37.385746
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 37.385746
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 37.385746
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.452
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.315
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.034
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.16614741
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.986101
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 160.872
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_Name
+      value: Wheelbarrow Walk (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7205140776170859923, guid: ca05a1edd4a894e4080b67f7905b54e2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: daa195226f9bd194fa2eb4cb5fa76d0e, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca05a1edd4a894e4080b67f7905b54e2, type: 3}
 --- !u!1001 &343868533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2777,7 +2858,6 @@ GameObject:
   m_Component:
   - component: {fileID: 424282627}
   - component: {fileID: 424282628}
-  - component: {fileID: 424282629}
   m_Layer: 0
   m_Name: Well
   m_TagString: Untagged
@@ -2815,33 +2895,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f737a2389dedb40f4b839a3aa5cb2931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 0.4
-  minHeight: -1.75
+  defaultMoveSpeed: 0.5
+  minHeight: -1.5
   maxHeight: -2.94
   midHeight: -1.5
---- !u!136 &424282629
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424282626}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 5.6826954
-  m_Height: 22.750448
-  m_Direction: 1
-  m_Center: {x: -0.33, y: 13.79, z: -0.24}
 --- !u!1001 &525429116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3090,7 +3147,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 424282628}
+      objectReference: {fileID: 0}
     - target: {fileID: 4460647962975532254, guid: 5b056cc4bd037594b99de85b40caf762,
         type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -3110,7 +3167,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 424282628}
+      objectReference: {fileID: 0}
     - target: {fileID: 4460647962975532254, guid: 5b056cc4bd037594b99de85b40caf762,
         type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -3315,7 +3372,7 @@ MonoBehaviour:
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 424282628}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: WellMovement, Assembly-CSharp
         m_MethodName: MoveFirstFloor
         m_Mode: 1
@@ -5355,7 +5412,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 424282628}
+      objectReference: {fileID: 0}
     - target: {fileID: 4460647962975532254, guid: 5b056cc4bd037594b99de85b40caf762,
         type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -5375,7 +5432,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 424282628}
+      objectReference: {fileID: 0}
     - target: {fileID: 4460647962975532254, guid: 5b056cc4bd037594b99de85b40caf762,
         type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -5575,7 +5632,7 @@ MonoBehaviour:
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 424282628}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: WellMovement, Assembly-CSharp
         m_MethodName: MoveSecondFloor
         m_Mode: 1
@@ -7800,3 +7857,4 @@ SceneRoots:
   - {fileID: 684307978}
   - {fileID: 816201656}
   - {fileID: 1050846335}
+  - {fileID: 278954802}
