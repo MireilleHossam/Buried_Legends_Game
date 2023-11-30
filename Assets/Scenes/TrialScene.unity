@@ -2603,8 +2603,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultMoveSpeed: 0.5
-  minHeight: -1.5
-  maxHeight: -2.94
+  minHeight: -5.7
+  maxHeight: -48.8
   midHeight: -1.5
 --- !u!1 &432210153 stripped
 GameObject:
