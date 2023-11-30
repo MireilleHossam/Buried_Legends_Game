@@ -44,4 +44,15 @@ public class TorchesTracker : MonoBehaviour
         }
         wellMovement.MoveFirstFloor();
     }
+    private void ShuffleArray<T>(T[] array)
+    {
+        int n = array.Length;
+        for (int i = n - 1; i > 0; i--)
+        {
+            int randIndex = UnityEngine.Random.Range(0, i + 1);
+            T temp = array[i];
+            array[i] = array[randIndex];
+            array[randIndex] = temp;
+        }
+    }
 }
