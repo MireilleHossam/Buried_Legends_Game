@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4899851073561728624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3093900625284172038}
+  m_Layer: 0
+  m_Name: moth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3093900625284172038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4899851073561728624}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.9187222, y: 1.2843326, z: -0.09551835}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 94228411137454564}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5237176669780201903
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3093900625284172038}
+    m_Modifications:
+    - target: {fileID: 5323523398644441163, guid: f3f8126adbf9542158c52d8202f8f399,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323523398644441163, guid: f3f8126adbf9542158c52d8202f8f399,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323523398644441163, guid: f3f8126adbf9542158c52d8202f8f399,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.282
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323523398644441163, guid: f3f8126adbf9542158c52d8202f8f399,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323523398644441163, guid: f3f8126adbf9542158c52d8202f8f399,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323523398644441163, guid: f3f8126adbf9542158c52d8202f8f399,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323523398644441163, guid: f3f8126adbf9542158c52d8202f8f399,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323523398644441163, guid: f3f8126adbf9542158c52d8202f8f399,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323523398644441163, guid: f3f8126adbf9542158c52d8202f8f399,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323523398644441163, guid: f3f8126adbf9542158c52d8202f8f399,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204141078225637976, guid: f3f8126adbf9542158c52d8202f8f399,
+        type: 3}
+      propertyPath: m_Name
+      value: Moth Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f3f8126adbf9542158c52d8202f8f399, type: 3}
+--- !u!4 &94228411137454564 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5323523398644441163, guid: f3f8126adbf9542158c52d8202f8f399,
+    type: 3}
+  m_PrefabInstance: {fileID: 5237176669780201903}
+  m_PrefabAsset: {fileID: 0}
