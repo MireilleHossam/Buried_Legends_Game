@@ -1,18 +1,23 @@
 using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class InstantiateObject : MonoBehaviour
 {
     // Reference to the prefab you want to instantiate
     public GameObject prefabToInstantiate;
 
-    void Start()
-    {
-        SpawnObject();
-    }
 
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            SpawnObject();
+            Debug.Log("pressed");
+        }
+    }
     public void SpawnObject()
     {
         Instantiate(prefabToInstantiate, transform.position, Quaternion.identity);
