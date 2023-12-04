@@ -8,11 +8,13 @@ public class InstantiateObject : MonoBehaviour
     // Reference to the prefab you want to instantiate
     public GameObject prefabToInstantiate;
 
-    private XRGrabInteractable grabInteractable;
-
     void Start()
     {
-        Instantiate(prefabToInstantiate, transform.position, transform.rotation);
+        SpawnObject();
     }
 
+    public void SpawnObject()
+    {
+        Instantiate(prefabToInstantiate, transform.position, Quaternion.identity);
+    }
 }
