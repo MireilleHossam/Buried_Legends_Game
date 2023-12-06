@@ -9,39 +9,33 @@ public class GrabSwordFloorMoves : MonoBehaviour
 
 
 
-   // void Start()
-    //{
-       // Debug.Log("hold sword");
-       // wellMovement.MoveSecondFloor();
+    private XRGrabInteractable interactable;
 
-//    }
-    private bool isGrabbed = false;
-
-    void Start()
+    private void Start()
     {
-        StartCoroutine(CheckForGrab());
-    }
+        // Get the XRGrabInteractable component on the object
+        interactable = GetComponent<XRGrabInteractable>();
 
-    IEnumerator CheckForGrab()
-    {
-        // Wait for a short delay after instantiation
-        yield return new WaitForSeconds(0.5f);
-
-        // Check if the object is grabbed using XR Grab Interactable
-        XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
-
-        while (!isGrabbed)
+        if (interactable == null)
         {
-            if (grabInteractable != null && grabInteractable.isSelected)
-            {
-                // The object is grabbed
-                isGrabbed = true;
-                Debug.Log("Object is grabbed!");
-                wellMovement.MoveSecondFloor(); break;
-            }
-
-            // Check again in the next frame
-            yield return null;
+            Debug.LogError("XRGrabInteractable component not found on the object.");
+        }
+        else
+        {
+            // Subscribe to the OnSelectEntered event to detect when the object is grabbed
+            interactable.onSelectEntered.AddListener(OnGrabbed);
         }
     }
+
+    private void OnGrabbed(XRBaseInteractor interactor)
+    {
+        // The function to call when the object is grabbed
+        Debug.Log("Object is grabbed! Calling your function...");
+
+        // Call your custom function here
+        //MoveSecondFloor();
+    }
+
+    
 }
+
