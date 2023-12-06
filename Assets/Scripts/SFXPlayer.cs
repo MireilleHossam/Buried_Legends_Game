@@ -9,7 +9,7 @@ public class SFXPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+       // audioSource = GetComponent<AudioSource>();
         //PlaySFX(); // debugging
     }
 
