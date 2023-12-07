@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1487006996173464089}
   - component: {fileID: 2462034864860510616}
   - component: {fileID: 6702649340520483709}
+  - component: {fileID: 5213472615250671989}
+  - component: {fileID: 3750050531576269941}
   m_Layer: 0
   m_Name: LongSword 1
   m_TagString: Sword
@@ -349,7 +351,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0d3509336b0c34f9b8e03a1eb843c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wellMovement: {fileID: 0}
+--- !u!136 &5213472615250671989
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2186500167132392815}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.06
+  m_Height: 1.04
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.26, z: 0}
+--- !u!114 &3750050531576269941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2186500167132392815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0d3509336b0c34f9b8e03a1eb843c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5423984837053242979
 GameObject:
   m_ObjectHideFlags: 0
