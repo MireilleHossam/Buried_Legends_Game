@@ -15,6 +15,16 @@ public class WellMovement : MonoBehaviour
     private bool moveFirst = false;
     private bool moveSecond = false;
     private bool moveThird = false;
+
+    private void OnEnable()
+    {
+        EventsManager.OnSwordPickedUp += MoveSecondFloor;
+    }
+
+    private void OnDisable()
+    {
+        EventsManager.OnSwordPickedUp -= MoveSecondFloor;
+    }
     private void Start()
     {
         //intialMoveSpeed = 0f;
