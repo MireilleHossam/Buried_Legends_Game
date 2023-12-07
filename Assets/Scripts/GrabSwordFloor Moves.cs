@@ -11,6 +11,7 @@ public class GrabSwordFloorMoves : MonoBehaviour
     public void MoveFloor()
     {
         EventsManager.MoveSecondFloor();
+        Debug.Log("Grabbed sword");
     }
 
 
