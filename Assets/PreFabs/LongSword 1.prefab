@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7807259508353096158}
   - component: {fileID: 1487006996173464089}
   - component: {fileID: 2462034864860510616}
-  - component: {fileID: 2771342197294741684}
+  - component: {fileID: 6702649340520483709}
   m_Layer: 0
   m_Name: LongSword 1
   m_TagString: Sword
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &2771342197294741684
+--- !u!114 &6702649340520483709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -349,6 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0d3509336b0c34f9b8e03a1eb843c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wellMovement: {fileID: 0}
 --- !u!1 &5423984837053242979
 GameObject:
   m_ObjectHideFlags: 0

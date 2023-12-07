@@ -7,35 +7,23 @@ public class GrabSwordFloorMoves : MonoBehaviour
 {
     private WellMovement wellMovement;
 
+    // You need to assign a prefab to this field in the Unity Editor.
+    public GameObject prefab;
 
-
-    private XRGrabInteractable interactable;
-
-    private void Start()
+    void Start()
     {
-        // Get the XRGrabInteractable component on the object
-        interactable = GetComponent<XRGrabInteractable>();
+        // Instantiate the prefab in the Start method.
+        GameObject prefabInstance = GameObject.Instantiate(prefab) as GameObject;
 
-        if (interactable == null)
+        if (prefabInstance != null)
         {
-            Debug.LogError("XRGrabInteractable component not found on the object.");
-        }
-        else
-        {
-            // Subscribe to the OnSelectEntered event to detect when the object is grabbed
-            interactable.onSelectEntered.AddListener(OnGrabbed);
+            // Assuming MyScript is the correct script name. Replace it with the actual script name.
+            var myScriptReference = prefabInstance.GetComponent<WellMovement>();
+
+            if (myScriptReference != null)
+            {
+                myScriptReference.MoveSecondFloor();
+            }
         }
     }
-
-    private void OnGrabbed(XRBaseInteractor interactor)
-    {
-        // The function to call when the object is grabbed
-        Debug.Log("Object is grabbed! Calling your function...");
-
-        // Call your custom function here
-        //MoveSecondFloor();
-    }
-
-    
 }
-
