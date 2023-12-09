@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
-    public Transform movementObject;
-    private WellMovement wellMover;
+    public GameObject characterInstantiator;
     // Start is called before the first frame update
 
     private void Awake()
     {
-        wellMover = movementObject.GetComponent<WellMovement>();
+        
     }
     void Start()
     {
-        Debug.Log(wellMover.ToString());
-        wellMover.MoveFirstFloor();
+
+        characterInstantiator.GetComponent<InstantiateObject>().SpawnObject();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            characterInstantiator.GetComponent<InstantiateObject>().SpawnObject();
+        }
     }
 
     public void Interact()

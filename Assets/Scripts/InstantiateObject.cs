@@ -13,11 +13,7 @@ public class InstantiateObject : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            SpawnObject();
-            Debug.Log("pressed");
-        }
+      
     }
     public void SpawnObject()
     {
@@ -29,6 +25,6 @@ public class InstantiateObject : MonoBehaviour
         {
             Instantiate(prefabToInstantiate, transform.position, Quaternion.identity);
         }
-        
+       
     }
 }
