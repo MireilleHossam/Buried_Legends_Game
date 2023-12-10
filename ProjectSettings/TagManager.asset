@@ -7,6 +7,7 @@ TagManager:
   - MainTorch
   - Torch
   - Sword
+  - Floor
   layers:
   - Default
   - TransparentFX

@@ -26,15 +26,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885839572624967738}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1948449, y: 23.480453, z: -1.16759}
+  m_LocalRotation: {x: -0, y: 0.51811665, z: -0, w: 0.85531}
+  m_LocalPosition: {x: -0.32, y: 23.480453, z: -0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9051986314734689282}
   - {fileID: 4463452866431140947}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 62.412, z: 0}
 --- !u!114 &8089875866591473546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +144,7 @@ PrefabInstance:
     - target: {fileID: 5277357059488637512, guid: a30a268806e3b7d4ba3021a2dcf1780f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.43241
+      value: -0.383
       objectReference: {fileID: 0}
     - target: {fileID: 5277357059488637512, guid: a30a268806e3b7d4ba3021a2dcf1780f,
         type: 3}
@@ -233,7 +233,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.9958577
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
