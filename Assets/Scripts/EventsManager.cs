@@ -15,5 +15,6 @@ public static class EventsManager
     public static void MoveSecondFloor()
     {
         OnSwordPickedUp?.Invoke();
+        Debug.Log("invoke");
     }
 }
