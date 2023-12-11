@@ -10,6 +10,7 @@ public class VREnemyController : MonoBehaviour
     public float distanceThreshold = 3f;
     public float attackingSpeed = 5f;
     public float walkingSpeed = 2f;
+    public float deathSpeed = 2f;
 
     void Update()
     {
@@ -22,14 +23,24 @@ public class VREnemyController : MonoBehaviour
             // Far from the player, play walking animation and move slowly
             enemy.SetBool("isWalking", true);
             enemy.SetBool("isAttacking", false);
+            enemy.SetBool("isDieing", false);
             MoveCharacter(walkingSpeed);
         }
-        else
+        else if (distanceToPlayer <= distanceThreshold && distanceToPlayer > 1.0f)
         {
             // Close to the player, play attacking animation and move quickly
             enemy.SetBool("isWalking", false);
             enemy.SetBool("isAttacking", true);
+            enemy.SetBool("isDieing", false);
             MoveCharacter(attackingSpeed);
+        }
+        else
+        {
+            // Close to the player, play dying animation and move quickly
+            enemy.SetBool("isWalking", false);
+            enemy.SetBool("isAttacking", false);
+            enemy.SetBool("isDieing", true);
+            MoveCharacter(deathSpeed);
         }
     }
 
