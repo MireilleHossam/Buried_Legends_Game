@@ -8,6 +8,8 @@ TagManager:
   - Torch
   - Sword
   - Floor
+  - Skina
+  - Enemy
   layers:
   - Default
   - TransparentFX
