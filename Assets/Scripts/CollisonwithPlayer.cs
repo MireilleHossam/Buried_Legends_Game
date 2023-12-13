@@ -5,18 +5,30 @@ using UnityEngine;
 public class CollisonwithPlayer : MonoBehaviour
 {
     private WellMovement wellMovement;
+    private InstantiateObject instantiateObject;
+
+    private void Start()
+    {
+        // Assuming the InstantiateObject script is on the same GameObject
+        instantiateObject = GetComponent<InstantiateObject>();
+
+        // If the InstantiateObject script is on a different GameObject, you might need to find it using other methods.
+        // instantiateObject = GameObject.FindObjectOfType<InstantiateObject>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Sword"))
         {
             Debug.Log("collision made");
-            MoveThirdFloor();
+            wellMovement.MoveThirdFloor();
+
         }
     }
-    public void MoveThirdFloor()
-    {
-        EventsManager.MoveSecondFloor();
-        Debug.Log("COLLISION sword");
-    }
+   //ublic void MoveThirdFloor()
+   //
+    //  EventsManager.MoveSecondFloor();
+    //  Debug.Log("COLLISION sword");
+    //
+
 }
