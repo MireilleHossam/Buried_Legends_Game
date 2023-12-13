@@ -7,7 +7,7 @@ public class VREnemyController : MonoBehaviour
     public Transform player;
     public Animator enemy;
 
-    public float distanceThreshold = 10f;
+    public float distanceThreshold = 0.5f;
     public float attackingSpeed = 2f;
     public float walkingSpeed = 2f;
     public float deathSpeed = 2f;
@@ -17,7 +17,7 @@ public class VREnemyController : MonoBehaviour
 
     private void Start()
     {
-        enemy.SetBool("IsIdle", true);
+        //enemy.SetBool("IsIdle", true);
     }
 
     void Update()
@@ -33,7 +33,7 @@ public class VREnemyController : MonoBehaviour
                 // Far from the player, play walking animation and move slowly
                 SetMovementParameters(false, true, false, walkingSpeed);
             }
-            else if (distanceToPlayer <= distanceThreshold && distanceToPlayer > 1.0f)
+            else if (distanceToPlayer <= distanceThreshold )
             {
                 // Close to the player, play attacking animation and move quickly
                 SetMovementParameters(false, false, true, attackingSpeed);
@@ -45,7 +45,7 @@ public class VREnemyController : MonoBehaviour
             }
         }
     }
-
+    //&& distanceToPlayer > 1.0f LINE 36
     void SetMovementParameters(bool isIdle, bool isWalk, bool isAttack, float speed)
     {
         // Set animation parameters
@@ -57,7 +57,9 @@ public class VREnemyController : MonoBehaviour
         Vector3 direction = player.position - transform.position;
         direction.y = 0; // Keep the character level
         direction.Normalize();
+        if (isWalk) { 
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
+        }
     }
 
     // Add this method to handle collisions

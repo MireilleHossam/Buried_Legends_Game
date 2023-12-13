@@ -1,0 +1,77 @@
+# Blender 3.4.1 MTL File: 'Shagret-EL_DOR.blend'
+# www.blender.org
+
+newmtl Brown_Hair
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Ottoman_style_fabric
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd fabric_basecolor.jpg
+map_Ns fabric_roughness.jpg
+map_refl fabric_metallic.jpg
+
+newmtl Royal_Cloth
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd New_Graph_Basecolor.jpg
+map_Ns New_Graph_Roughness.jpg
+map_d Texture/Texture2.jpg
+map_Bump -bm 1.000000 New_Graph_Normal.jpg
+
+newmtl Soft_Orange_Fabric
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl ZombieGirl_Material
+Ns 200.000000
+Ka 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd zombie_diffuse.png
+map_Ks zombie_specular.png
+map_d zombie_diffuse.png
+map_Bump -bm 1.000000 zombie_normal.png
+
+newmtl ZombieGirl_Material.001
+Ns 200.000000
+Ka 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd zombie_diffuse.png
+map_Ks zombie_specular.png
+map_d zombie_diffuse.png
+map_Bump -bm 1.000000 zombie_normal.png
+
+newmtl ZombieGirl_body_Material
+Ns 200.000000
+Ka 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd zombie_body_diffuse.png
+map_Ks zombie_specular.png
+map_Bump -bm 1.000000 zombie_normal.png
