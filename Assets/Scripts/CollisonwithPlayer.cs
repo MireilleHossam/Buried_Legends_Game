@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CollisonwithPlayer : MonoBehaviour
 {
-    private WellMovement wellMovement;
-    //ivate InstantiateObject instantiateObject;
+    public WellMovement wellMovement;
+    public InstantiateObject goldInstatiator;
 
     private void Start()
     {
@@ -22,6 +22,7 @@ public class CollisonwithPlayer : MonoBehaviour
         {
             Debug.Log("collision made");
             wellMovement.MoveThirdFloor();
+            goldInstatiator.SpawnObject();
 
         }
     }

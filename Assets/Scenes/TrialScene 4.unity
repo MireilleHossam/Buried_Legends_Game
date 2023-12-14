@@ -17312,6 +17312,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7913764431157347146}
     m_Modifications:
+    - target: {fileID: -4333192384073075874, guid: 8dffb0ca938290d439d3ed1e9ae71594,
+        type: 3}
+      propertyPath: disabledObject
+      value: 
+      objectReference: {fileID: 129415059}
     - target: {fileID: 2186500167132392815, guid: 8dffb0ca938290d439d3ed1e9ae71594,
         type: 3}
       propertyPath: m_Name
@@ -21060,7 +21065,7 @@ PrefabInstance:
     - target: {fileID: 8809080948622619788, guid: 15afb5cc12f53dd4abe5eea48194ef49,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8809080948622619788, guid: 15afb5cc12f53dd4abe5eea48194ef49,
         type: 3}
@@ -21138,6 +21143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec9e37492c28ce5489157e727b760847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wellMovement: {fileID: 674457819605492727}
+  goldInstatiator: {fileID: 461503648}
 --- !u!114 &7326722896918414431
 MonoBehaviour:
   m_ObjectHideFlags: 0

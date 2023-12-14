@@ -8,6 +8,7 @@ public class GrabSwordFloorMoves : MonoBehaviour
 {
     private WellMovement wellMovement;
     private XRGrabInteractable interactable;
+    public GameObject disabledObject;
 
     private void Awake()
     {
@@ -19,6 +20,8 @@ public class GrabSwordFloorMoves : MonoBehaviour
     private void OnSelectEntered(SelectEnterEventArgs arg0)
     {
         MoveFloor();
+        AwakeDisabledObject();
+        
     }
 
     public void MoveFloor()
@@ -27,6 +30,17 @@ public class GrabSwordFloorMoves : MonoBehaviour
         Debug.Log("Grabbed sword");
     }
 
-
+    private void AwakeDisabledObject()
+    {
+        if (disabledObject != null)
+        {
+            // Set the object active
+            disabledObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("Disabled object reference is null. Please assign a valid object in the inspector.");
+        }
+    }
 
 }
