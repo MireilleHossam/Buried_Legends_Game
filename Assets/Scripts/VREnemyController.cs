@@ -24,8 +24,10 @@ public class VREnemyController : MonoBehaviour
     {
         if (!isDead)
         {
+            Vector3 playerPosition = new Vector3(player.position.x, 0f, player.position.z);
+            Vector3 modifierdTransform = new Vector3(transform.position.x, 0f, transform.position.z);
             // Calculate the distance between the player and the VR character
-            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+            float distanceToPlayer = Vector3.Distance(modifierdTransform, playerPosition);
 
             // Determine movement and animation based on the distance
             if (distanceToPlayer > distanceThreshold)
@@ -54,10 +56,12 @@ public class VREnemyController : MonoBehaviour
         enemy.SetBool("IsAttack", isAttack);
 
         // Move the VR character forward in the direction of the player
-        Vector3 direction = player.position - transform.position;
+        if (isWalk)
+        {
+            Vector3 direction = player.position - transform.position;
         direction.y = 0; // Keep the character level
         direction.Normalize();
-        if (isWalk) { 
+        
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
         }
     }
