@@ -24,6 +24,7 @@ public class CollisonwithPlayer : MonoBehaviour
             wellMovement.MoveThirdFloor();
             goldInstatiator.SpawnObject();
 
+
         }
     }
    //ublic void MoveThirdFloor()

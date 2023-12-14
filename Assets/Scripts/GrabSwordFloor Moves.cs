@@ -9,6 +9,8 @@ public class GrabSwordFloorMoves : MonoBehaviour
     private WellMovement wellMovement;
     private XRGrabInteractable interactable;
     public GameObject disabledObject;
+    public GameObject disabledObject2;
+
 
     private void Awake()
     {
@@ -32,10 +34,11 @@ public class GrabSwordFloorMoves : MonoBehaviour
 
     private void AwakeDisabledObject()
     {
-        if (disabledObject != null)
+        if (disabledObject != null && disabledObject2 != null)
         {
             // Set the object active
             disabledObject.SetActive(true);
+            disabledObject2.SetActive(true);
         }
         else
         {
